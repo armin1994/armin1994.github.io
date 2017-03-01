@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Under Construction</title>
+
+<style>
+</style>
+
+<link href="http://we4creative.com/wp-content/plugins/coming-soon-maintenance-mode-from-acurax/templates/2/style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="http://we4creative.com/wp-content/plugins/coming-soon-maintenance-mode-from-acurax/images/favicon.png"  type="image/png">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+</head>
+<body style="background:#e4e4e4">
+	<div class="wrapper "> 
+		<div class="canvas960"> 
+			<div class="inline_block mg_top"> <div class="header">
+						<div id="csma_master_logo">
+				<img src="http://we4creative.com/wp-content/plugins/coming-soon-maintenance-mode-from-acurax/templates/2/images/logo.png" alt="Logo">
+			</div> <!-- csma_master_logo -->
+			</div><!-- header  -->
+			<div class="inline_block yellow" style="background: none repeat scroll 0 0 #ffd800;"> 
+				<div class="inline_block form">
+				
+					<h2 style="color:#000000"><span class="inline_main_title" style="font-size:72px; color:#000000"><strong>Hello</strong></span><br> We are Coming Very Soon </h2>
+										<form name="acx_csma_form" method="post" action="/sego-themes/white-space/assets/fonts/glyphicons-halflings-regular.eot?">  
+					<div id="acx_csma_success"  name="acx_csma_success" style="display:none;" >Successfully Subscribed</div>
+					<div id="acx_csma_invalid" name="acx_csma_invalid" style="display:none;" >Invalid Email</div>
+					<div id="acx_csma_error"  style="display:none;"></div>
+										<input type="text" id="acx_csma_name_hidden" name="acx_csma_name_hidden" value="" placeholder="Enter Your Name Here"/>
+					<input type="hidden" id="acx_csma_email" name="email" placeholder="Enter Your Email Here"> 
+					<input type="button" value="Next" id="acx_csma_submit" onclick="acx_csma_validate_email();" class="submit" style="color:#ffd800"> 
+										</form>
+									</div><!-- form -->
+				
+								
+				<div class="inline_block timer_holder">
+
+							
+					<h3 style="color:#000000">Estimate time for launching</h3>
+					<div class="timer_box days"> 
+						<ul>
+							<li  id="days" style="color:#000000">000</li>
+							<li id="acx_day_disp" class="day_text" style="color:#000000">Day</li>
+						</ul>
+					</div><!-- timer_box -->
+					<div class="timer_box"> 
+						<ul>
+							<li id="hours_0" style="background:#ffffff;color:#000000">0</li>
+							<li id="hours_1" style="background:#ffffff;color:#000000">0</li>
+						</ul>
+						<p id="acx_hour_disp" style="color:#000000">Hour</p>
+					</div><!-- timer_box -->	
+					<div class="timer_box"> 
+						<ul>
+							<li id="minutes_0" style="background:#ffffff;color:#000000">0</li>
+							<li id="minutes_1" style="background:#ffffff;color:#000000">0</li>
+						</ul>
+						<p id="acx_min_disp" style="color:#000000">Minute</p>						
+					</div><!-- timer_box -->
+					<div class="timer_box last_one"> 
+						<ul>
+							<li id="seconds_0" style="background:#ffffff;color:#000000">0</li>
+							<li id="seconds_1" style="background:#ffffff;color:#000000">0</li>
+						</ul>
+						<p id="acx_sec_disp" style="color:#000000">Second</p>						
+					</div><!-- timer_box -->
+										<div id="acx_csma_content_below_timer">
+										</div>
+				</div><!-- timer_holder -->
+				
+				<div class="inline_block text_box">
+								
+					<h4 style="color:#000000">What is Coming</h4> 
+					<p style="color:#000000;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+				</div><!-- inline_block -->
+			</div><!-- inline_block -->
+			<div class="footer"> 
+						</div><!-- footer -->			
+		</div><!-- inline_block -->
+
+		</div><!-- canvas960 -->
+	</div><!-- wrapper -->
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery(window).keydown(function(event){
+    if(event.keyCode == 13) {
+acx_csma_validate_email();
+return false;
+    }
+  });
+});
+var acx_csma_form_status=1;
+function acx_csma_validate_email()
+{
+		var acx_csma_name_hidden=document.getElementById('acx_csma_name_hidden').value;
+	if(acx_csma_form_status== 1)
+	{
+	if(acx_csma_name_hidden=="")
+	{
+		alert('Please Enter Your Name Here');
+		acx_csma_form_status=1;
+		return false;
+	}
+	else{
+	document.getElementById('acx_csma_name_hidden').type = 'hidden';
+	document.getElementById('acx_csma_email').type = 'email';
+	jQuery("#acx_csma_email").show();
+	document.getElementById('acx_csma_submit').value="Submit";
+	acx_csma_form_status=2;
+	return false;
+	}
+	}
+	else if(acx_csma_form_status==2)
+	{
+		var acx_csma_email = document.getElementById('acx_csma_email').value;
+	var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+	if (acx_csma_email=='') 
+	{
+	    alert('Please Enter Your Email Here');
+		return false;
+	}
+	else if (!expr.test(acx_csma_email)) 
+	{
+		document.getElementById('acx_csma_email').value="";
+		document.getElementById('acx_csma_name_hidden').value="";
+		jQuery("#acx_csma_email").hide();
+		jQuery("#acx_csma_submit").hide();
+		jQuery("#acx_csma_invalid").show();
+		setTimeout(function()
+			{ 
+				jQuery("#acx_csma_invalid").hide(); 
+				document.getElementById('acx_csma_name_hidden').type = 'text';
+				document.getElementById('acx_csma_submit').value="Next";
+				jQuery("#acx_csma_submit").show();
+				acx_csma_form_status=1;
+		
+			}, 3000);
+		
+		
+		return false;
+	}
+	else 
+	{
+	var acx_load="<div id='acx_csma_loading'><div class='load_1'></div></div>";
+	jQuery('body').append(acx_load);
+	
+	var timestamp =  Math.floor(1488364507);
+	var ip="41.225.151.202";
+	var acx_csma_ajaxurl ="http://we4creative.com/wp-admin/admin-ajax.php";
+	var order = 'name='+acx_csma_name_hidden+'&email='+acx_csma_email+'&ip='+ip+'&timestamp='+timestamp+'&action=acx_csma_subscribe_email'+'&acx_csma_subscribe_es=c2f0c9dd19';
+		jQuery.post(acx_csma_ajaxurl, order, function(theResponse)
+		{
+			jQuery("#acx_csma_loading").remove();
+			if(theResponse == "success")
+			{
+			document.getElementById('acx_csma_email').value="";
+			document.getElementById('acx_csma_name_hidden').value="";
+			jQuery("#acx_csma_email").hide();
+			jQuery("#acx_csma_submit").hide();
+			
+			jQuery("#acx_csma_success").show();
+			setTimeout(function()
+			{ 
+				jQuery("#acx_csma_success").hide(); 
+				document.getElementById('acx_csma_name_hidden').type = 'text';
+				document.getElementById('acx_csma_submit').value="Next";
+				jQuery("#acx_csma_submit").show();
+				acx_csma_form_status=1;
+		
+			}, 3000);
+			}  
+			else{
+			document.getElementById('acx_csma_email').value="";
+			document.getElementById('acx_csma_name_hidden').value="";
+			jQuery("#acx_csma_email").hide();
+			jQuery("#acx_csma_submit").hide();
+			jQuery("#acx_csma_error").show();
+			jQuery("#acx_csma_error").html("Email Already Exists");
+			setTimeout(function()
+			{ 
+				jQuery("#acx_csma_error").html(''); 
+				jQuery("#acx_csma_error").hide(); 
+				document.getElementById('acx_csma_name_hidden').type = 'text';
+				document.getElementById('acx_csma_submit').value="Next";
+				jQuery("#acx_csma_submit").show();
+				acx_csma_form_status=1;
+		
+			}, 3000);
+			
+			}  
+		});
+	}
+	
+	}}
+</script>
+</body>
+</html>
