@@ -172,13 +172,9 @@ section .offset-top {
 }
 .col-left ul li.current a:before {
 	background: #1177b5;
-	width: 100%;
-	transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .col-left ul li.current a:after {
 	background: transparent;
-	width: 100%;
-	transition: 0s;
 }
 .col-left .social {
 	text-align: center;
